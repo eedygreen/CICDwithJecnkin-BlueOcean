@@ -11,14 +11,13 @@ pipeline {
                 sh 'sudo chown root:jenkins /run/docker.sock'
             }
         }
-    }
-    agent {
+        agent {
          docker {
              image 'node:6-alpine'
              args '-p 3000:3000'
          }
      }
-    stages {
+        stages {
          stage('Build') {
              steps {
                  sh 'npm install'
@@ -27,3 +26,5 @@ pipeline {
          }
       }
     }
+  
+  }
