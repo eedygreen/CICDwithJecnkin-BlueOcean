@@ -4,15 +4,15 @@ pipeline {
 
     stages {
 
-        stage('Fix the permission issue') {
+        // stage('Fix the permission issue') {
 
-            agent any
+        //     agent any
 
-            steps {
-                sh 'sudo chown root:jenkins /run/docker.sock'
-            }
+        //     steps {
+        //         sh 'sudo chown root:jenkins /run/docker.sock'
+        //     }
 
-        }
+        // }
 
         stage('Step 1') {
 
@@ -29,7 +29,7 @@ pipeline {
 
             steps {
 
-                sh "npm install"
+                sh 'npm install'
             }
 
         }   
