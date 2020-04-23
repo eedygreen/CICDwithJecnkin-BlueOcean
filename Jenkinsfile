@@ -4,14 +4,6 @@ pipeline {
 
     stages {
 
-        stage('Fix the permission issue') {
-            agent any 
-            steps {
-                sh 'sudo docker pull 6-alpine'
-            }
-
-        }
-
         stage ('step 1'){
             agent {
                 
