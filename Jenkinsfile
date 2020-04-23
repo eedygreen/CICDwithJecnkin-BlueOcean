@@ -1,32 +1,24 @@
 pipeline {
 
-    agent none
+    agent { none }
 
     stages {
 
         stage('Fix the permission issue') {
-
-            agent any
-
+            agen { any }
             steps {
-                sh 'sudo chown root:jenkins /run/docker.sock'
+                sh 'sudo chown root:jenkins /var/run/docker.sock'
             }
 
         }
 
         stage('Step 1') {
 
-            agent {
-
-                docker {
-                    steps {
-                        image 'node:6-alpine'
+            agent { docker { iamge 'node:6-alpine'} }
+                steps {
                         args '-p 3000:3000'
                     }
-                }                
-                }
-            }
-        
+                }   
 
         stage('Build') {
 
