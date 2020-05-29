@@ -3,5 +3,5 @@
 
 
 =======
-# CICDwithJecnkin-BlueOcean
+# CICDwithJenkin-BlueOcean
 >>>>>>> 37d561f66d639f7bf065c50c2f0c5e948628e6b4
